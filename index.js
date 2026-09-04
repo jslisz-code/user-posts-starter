@@ -1,5 +1,5 @@
-API 1: "https://jsonplaceholder.typicode.com/users"
-API 2: "https://jsonplaceholder.typicode.com/posts?userId=:id"
+// API 1: "https://jsonplaceholder.typicode.com/users"
+// API 2: "https://jsonplaceholder.typicode.com/posts?userId=:id"
 const usersListEl = document.querySelector('.user-list');
 
 async function main() {
@@ -11,6 +11,7 @@ async function main() {
 main();
 
 function showUserPost(id) {
+  localStorage.setItem('id', id);
   window.location.href = `${window.location.origin}/user.html`
 }
 
