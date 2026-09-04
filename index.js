@@ -5,7 +5,7 @@ const usersListEl = document.querySelector('.user-list');
 async function main() {
   const users = await fetch("https://jsonplaceholder.typicode.com/users");
   const usersData = await users.json();
-  usersListEl.innerHTML = usersData.map((user) => userHTML(user)).join('');
+  postsListEl.innerHTML = usersData.map((user) => userHTML(user)).join('');
 }
 
 main();
@@ -21,8 +21,8 @@ function userHTML(user) {
   return `<div class="user-card" onclick="showUserPost(${user.id})">
     <div class="user-card__container">
       <h2>${user.name}</h2>
-      <p><b>Email: ${user.email}</b></p>
-      <p><b>Phone: ${user.phone}</b></p>
+      <p><b>Email:</b> ${user.email}</p>
+      <p><b>Phone:</b> ${user.phone}</p>
       <p><b>Website: <a href="https://${user.website}" 
       target="_blank">${user.website}
       </a></p>
