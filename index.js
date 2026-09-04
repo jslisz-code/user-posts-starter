@@ -27,5 +27,5 @@ function userHTML(user) {
       target="_blank">${user.website}
       </a></p>
     </div>
-  </div>';
+  </div>`;
 }
