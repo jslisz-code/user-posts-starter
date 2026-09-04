@@ -5,7 +5,7 @@ const usersListEl = document.querySelector('.user-list');
 async function main() {
   const users = await fetch("https://jsonplaceholder.typicode.com/users");
   const usersData = await users.json();
-  postsListEl.innerHTML = usersData.map((user) => userHTML(user)).join('');
+  usersListEl.innerHTML = usersData.map((user) => userHTML(user)).join('');
 }
 
 main();
